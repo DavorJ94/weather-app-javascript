@@ -31,7 +31,8 @@ const initialState = `<h1 class="title">Weather App</h1>
 <hr>
 <h1 class="forecast-title">Forecast</h1>
 <div class="forecast tomorrow"></div>
-<div class="forecast in-two-days"></div>`;
+<div class="forecast in-two-days"></div>
+<p class="api-creator">Used API from <a href="https://www.weatherapi.com/" target="_blank">Weather API</a>.</p>`;
 
 let options = {
   enableHighAccuracy: true,
