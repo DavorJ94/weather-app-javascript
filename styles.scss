@@ -8,9 +8,14 @@ html,
 body {
   background-color: #1c1c1c;
   font-family: "Kiwi Maru", serif;
-
+  margin: 0;
+  padding: 0;
   text-align: center;
   color: white;
+}
+
+.message-before-data {
+  margin-top: 4em;
 }
 
 .title {
@@ -46,6 +51,10 @@ body {
   margin-top: 0.75em;
 }
 
+.current-conditions {
+  margin-bottom: 2em;
+}
+
 .current-time,
 .last-updated {
   font-size: 0.9rem;
@@ -60,4 +69,52 @@ body {
   font-size: 0.75rem;
   margin: 0;
   margin-bottom: 0.2em;
+}
+
+.forecast-title {
+  letter-spacing: 2px;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.forecast {
+  margin-bottom: 5em;
+}
+
+.forecast-subtitle {
+  letter-spacing: 3px;
+}
+
+.forecast-avg-temp {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.forecast-text {
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
+.max-temp-forecast {
+  margin-top: 1.5em;
+}
+
+.tomorrow::after {
+  content: " ";
+  position: absolute;
+  margin-top: 1em;
+  height: 3px;
+  width: 50%;
+  left: 25%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.forecast-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 30%;
+  left: 35%;
+  margin-top: 1.5em;
+  background-color: rgba(255, 255, 255, 0.5);
 }
