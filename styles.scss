@@ -118,3 +118,24 @@ body {
   margin-top: 1.5em;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.button {
+  padding: 0.3em 0.5em;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(29, 195, 207);
+  outline: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  margin-top: 1em;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.celsius {
+  background-color: rgb(29, 195, 207);
+}

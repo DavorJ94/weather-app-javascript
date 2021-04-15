@@ -3,7 +3,9 @@ export default function populateCurrentData(weatherData) {
     ".city-and-country"
   ).innerHTML = `${weatherData.location.name}, ${weatherData.location.country} <span>(${weatherData.location.lat}, ${weatherData.location.lon})</span>`;
 
-  document.querySelector(".current-time").textContent = `Current time: ${
+  document.querySelector(
+    ".current-time"
+  ).textContent = `Time of data retrieval: ${
     weatherData.location.localtime.split(" ")[1]
   }`;
 

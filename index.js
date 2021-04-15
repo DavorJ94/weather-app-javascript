@@ -1,7 +1,13 @@
 import populateCurrentData from "./populateCurrentData.js";
 import populateForecast from "./populateForecast.js";
+import convertEverythingToFahrenheit from "./convertEverythingToFahrenheit.js";
+import convertEverythingToCelsius from "./convertEverythingToCelsius.js";
 
 const initialState = `<h1 class="title">Weather App</h1>
+<div class="buttons">
+  <button class="button celsius">°C</button>
+  <button class="button fahrenheit">°F</button>
+</div>
 <h2 class="city-and-country"></h2>
 <p class="current-time"></p>
 <p class="last-updated"></p>
@@ -35,6 +41,12 @@ navigator.geolocation.getCurrentPosition(getWeatherData, error, options);
 
 async function getWeatherData(pos) {
   document.body.innerHTML = initialState;
+  const celsiusButton = document.querySelector(".celsius");
+  const fahrenheitButton = document.querySelector(".fahrenheit");
+
+  celsiusButton.removeEventListener("click", handleCelsiusConversion);
+  fahrenheitButton.removeEventListener("click", handleFahrenheitConversion);
+
   let crd = pos.coords;
   const latitude = crd.latitude;
   const longitude = crd.longitude;
@@ -47,4 +59,32 @@ async function getWeatherData(pos) {
   populateCurrentData(weatherData);
   populateForecast(weatherData.forecast.forecastday[1].day, "Tomorrow");
   populateForecast(weatherData.forecast.forecastday[2].day, "In two days");
+
+  celsiusButton.addEventListener("click", handleCelsiusConversion);
+  fahrenheitButton.addEventListener("click", handleFahrenheitConversion);
+}
+
+function handleCelsiusConversion() {
+  if (
+    getComputedStyle(document.querySelector(".celsius")).backgroundColor !==
+    "rgba(0, 0, 0, 0)"
+  )
+    return;
+  document.querySelector(".celsius").style.backgroundColor =
+    "rgb(29, 195, 207)";
+  document.querySelector(".fahrenheit").style.backgroundColor =
+    "rgba(0, 0, 0, 0)";
+  convertEverythingToCelsius();
+}
+
+function handleFahrenheitConversion() {
+  if (
+    getComputedStyle(document.querySelector(".fahrenheit")).backgroundColor !==
+    "rgba(0, 0, 0, 0)"
+  )
+    return;
+  document.querySelector(".fahrenheit").style.backgroundColor =
+    "rgb(29, 195, 207)";
+  document.querySelector(".celsius").style.backgroundColor = "rgba(0, 0, 0, 0)";
+  convertEverythingToFahrenheit();
 }
