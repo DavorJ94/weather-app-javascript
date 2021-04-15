@@ -18,7 +18,7 @@ export default function populateForecast(forecast, day) {
     } °C</p>
     <p class="feels-like max-wind-speed-forecast forecast-text">Max. wind speed: ${
       forecast.maxwind_kph
-    } kmph</p>
+    } kph</p>
     <p class="feels-like chance-of-rain-forecast forecast-text">Chance of rain: ${
       forecast.daily_chance_of_rain
     }%</p>

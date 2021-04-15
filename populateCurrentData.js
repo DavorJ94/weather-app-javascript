@@ -49,5 +49,5 @@ export default function populateCurrentData(weatherData) {
 
   document.querySelector(
     ".wind-speed-direction"
-  ).innerText = `Wind speed (direction): ${weatherData.current.wind_kph} kmph (${weatherData.current.wind_dir})`;
+  ).innerText = `Wind speed (direction): ${weatherData.current.wind_kph} kph (${weatherData.current.wind_dir})`;
 }

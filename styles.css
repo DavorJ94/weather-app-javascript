@@ -52,7 +52,7 @@ body {
 }
 
 .current-conditions {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .current-time,
@@ -140,5 +140,15 @@ body {
 
 .celsius {
   background-color: #1dc3cf;
+}
+
+.kph,
+.mph {
+  font-size: 1rem;
+  border: 1px solid #e40e0e;
+}
+
+.kph {
+  background-color: #e40e0e;
 }
 /*# sourceMappingURL=styles.css.map */
