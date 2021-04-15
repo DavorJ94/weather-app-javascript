@@ -2,7 +2,7 @@
 
 API used for weather app is taken from https://www.weatherapi.com/.
 
-You can preview the web page here: https://www.davorj94.io/weather-app-javascript/.
+You can preview the web page here: https://www.davorj94.github.io/weather-app-javascript/.
 
 This whole project is based on the API and not on the styling of the page. Therefore, simplistic styling is created and icons based on the current weather (or forecasted) is taken as the link provided in the API.
 
