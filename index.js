@@ -1,9 +1,9 @@
-import populateCurrentData from "./populateCurrentData.js";
-import populateForecast from "./populateForecast.js";
-import convertEverythingToFahrenheit from "./convertEverythingToFahrenheit.js";
-import convertEverythingToCelsius from "./convertEverythingToCelsius.js";
-import convertEverythingToMph from "./convertEverythingToMph.js";
-import convertEverythingToKph from "./convertEverythingToKph.js";
+import populateCurrentData from "./utils/populateCurrentData.js";
+import populateForecast from "./utils/populateForecast.js";
+import convertEverythingToFahrenheit from "./utils/convertEverythingToFahrenheit.js";
+import convertEverythingToCelsius from "./utils/convertEverythingToCelsius.js";
+import convertEverythingToMph from "./utils/convertEverythingToMph.js";
+import convertEverythingToKph from "./utils/convertEverythingToKph.js";
 
 const initialState = `<h1 class="title">Weather App</h1>
 <div class="buttons">
